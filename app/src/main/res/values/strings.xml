@@ -6,4 +6,6 @@
     <string name="button_falling">Falling</string>
     <string name="switch_record">Recording</string>
     <string name="no_string">Error: NO STRING</string>
+    <string name="start_recording">Started Recording</string>
+    <string name="stop_recording">Stopped Recording</string>
 </resources>
