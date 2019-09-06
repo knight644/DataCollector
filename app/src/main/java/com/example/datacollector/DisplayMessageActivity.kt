@@ -2,6 +2,7 @@ package com.example.datacollector
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Chronometer
 import android.widget.TextView
 
 class DisplayMessageActivity : AppCompatActivity() {
@@ -17,5 +18,8 @@ class DisplayMessageActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView).apply {
             text = message
         }
+
+        val chronometer = findViewById<Chronometer>(R.id.chronometer)
+        chronometer.start()
     }
 }
