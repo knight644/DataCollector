@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Chronometer
 import android.widget.TextView
+import android.widget.Switch
+
 
 class DisplayMessageActivity : AppCompatActivity() {
 
@@ -15,11 +17,23 @@ class DisplayMessageActivity : AppCompatActivity() {
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
         // Capture the layout's TextView and set the string as its text
-        val textView = findViewById<TextView>(R.id.textView).apply {
+        findViewById<TextView>(R.id.textView).apply {
             text = message
         }
 
         val chronometer = findViewById<Chronometer>(R.id.chronometer)
-        chronometer.start()
+        chronometer.setOnChronometerTickListener {  }
+            // do something when chronometer changes
+
+        val switch = findViewById<Switch>(R.id.switch1)
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // Start chronometer
+                chronometer.start()
+            } else {
+                // Stop chronometer
+                chronometer.stop()
+            }
+        }
     }
 }

@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
+        android:checked="false"
         android:text="@string/switch_record"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="36sp"
@@ -44,5 +45,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        tools:checked="false" />
 </androidx.constraintlayout.widget.ConstraintLayout>
